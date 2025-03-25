@@ -1,0 +1,190 @@
+---
+title: 'Data deposition and reproducibility with Quarto and Rmarkdown'
+author: <br>![](imgs/quarto.png)<br><br>Dylan Padilla
+institute: "<br>Yale School of the Environment<br>Yale Institute for Biospheric Studies<br>New Haven, Connecticut"
+format: 
+  revealjs:
+    chalkboard: true
+    incremental: true
+    logo: imgs/yale-logo.png
+    footer: "🔗 [https://dylanpadilla.netlify.app/](https://dylanpadilla.netlify.app/)"
+    slide-number: true
+    multiplex: true
+    theme: [simple, assets/monash.scss]
+    show-slide-number: all
+    controls: true
+    width: 1280
+    height: 720
+    css: [assets/syntax-highlight.css, assets/custom.css, assets/pacman.css]
+    header-includes: |
+      <link rel="stylesheet" href="">
+execute:
+  echo: true
+---
+
+# [Outline]{style="font-family:Comic Sans MS;font-weight:normal;color:purple"} {background=''}
+
+## [Outline]{style="font-family:Comic Sans MS;font-weight:normal;color:purple"} {background=''}
+
+<br><br>
+
+- Cases of misconduct in Biology
+- Reproducibility in sciences
+- Tools for data reproducibility
+- What is Quarto?
+- Hands-on activity for demonstration
+
+# [Introduction]{style="font-family:Comic Sans MS;font-weight:normal;color:purple"} {background=''}
+
+
+## [Misconduct incidents]{style="font-family:Comic Sans MS;font-weight:normal;color:purple"} {background=''}
+
+<br>
+
+![](imgs/spider-misconduct.png)
+![](imgs/spice-misconduct.png)
+
+
+## [Misconduct incidents]{style="font-family:Comic Sans MS;font-weight:normal;color:purple"} {background=''}
+
+<center>
+![](imgs/list-incidents.png)
+</center>
+
+
+
+## [What is reproducibility?]{style="font-family:Comic Sans MS;font-weight:normal;color:purple"} {background=''}
+
+<br><br>
+
+Efforts to reproduce a previously observed result by using the same experimental design and conditions as the original study
+
+## [Lack of reproducibility]{style="font-family:Comic Sans MS;font-weight:normal;color:purple"} {background=''}
+
+<br><br>
+
+*A 2016 Nature survey, for example, revealed that in the field of biology alone, over 70% of researchers were unable to reproduce the findings of other scientists and approximately 60% of researchers could not reproduce their own findings.*
+
+
+## [Ongoing efforts to improve reproducibility]{style="font-family:Comic Sans MS;font-weight:normal;color:purple"} {background=''}
+
+<br>
+
+National Institutes of Health (NIH) - Rigor and Reproducibility:
+
+<br>
+
+*To help improve rigor, reproducibility, and transparency in scientific research, the NIH issued a notice in 2015 that informed scientists of revised grant application instructions that focused on improving experimental design, authenticating biological and chemical resources, analyzing and interpreting results, and accurately reporting research findings.*
+
+
+## [Tools for research reproducibility]{style="font-family:Comic Sans MS;font-weight:normal;color:purple"} {background=''}
+
+Yihui Xie<br>
+![](imgs/yihui-xie.jpg){width=20%}
+![](imgs/Rmd-model.png){width=90%}
+
+# [But quarto is the next-generation RMarkdown. <br><br> For everyone!]{style="font-family:Comic Sans MS;font-weight:normal;color:white"} {background-color='black'}
+
+## [So, what is quarto?]{style="font-family:Comic Sans MS;font-weight:normal;color:purple"} {background=''}
+
+Quarto® is an open-source scientific and technical publishing system built on Pandoc.
+
+- quarto is a language agnostic command line interface (CLI)
+
+
+## [So, what is quarto?]{style="font-family:Comic Sans MS;font-weight:normal;color:purple"} {background=''}
+
+Quarto® is an open-source scientific and technical publishing system built on Pandoc.
+
+<br>
+
+```{r, eval=FALSE}
+quarto --help
+```
+```{r, eval=FALSE}
+
+Usage:   quarto
+Version: 1.5.52
+
+Description:
+
+  Quarto CLI
+
+Options:
+
+  -h, --help     - Show this help.                            
+  -V, --version  - Show the version number for this program.
+
+```
+
+## [A **.qmd** is a plain text file]{style="font-family:Comic Sans MS;font-weight:normal;color:purple"} {background=''}
+
+<br>
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+```{r, eval=FALSE}
+
+format: html
+engine: knitr
+
+```
+<br>
+
+```{r, eval=FALSE}
+R code
+
+tapply(mtcars$mpg, list(mtcars$cycl),
+       mean)
+```
+
+:::
+
+::: {.column width='50%'}
+
+```{r, eval=FALSE}
+
+format: html
+engine: knitr
+
+```
+<br>
+
+```{html}
+HTML code
+
+<!DOCTYPE>
+<html>
+  <head>
+	<style>
+	</style>
+  </head>
+  <body>
+  </body>
+</html>
+
+```
+
+:::
+::::
+
+
+```{r, eval =FALSE}
+Markdown text
+This is a sentence with some **bold text**, some *italic text* and an 
+![image](image.png){fig-alt="Alt text for this image"}.
+
+```
+
+
+## [Tools for research reproducibility]{style="font-family:Comic Sans MS;font-weight:normal;color:purple"} {background=''}
+
+<br>
+
+![](imgs/qmd-model.png){width=90%}
+
+# [Hands-on activity]{style="font-family:Comic Sans MS;font-weight:normal;color:purple"} {background=''}
+
+
