@@ -101,6 +101,8 @@ Quarto® is an open-source scientific and technical publishing system built on P
 ```{r, eval=FALSE}
 quarto --help
 ```
+<br>
+
 ```{r, eval=FALSE}
 
 Usage:   quarto
